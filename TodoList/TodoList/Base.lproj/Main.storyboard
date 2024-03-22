@@ -23,6 +23,9 @@
                                         <rect key="frame" x="300" y="12.666666666666671" width="83" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="추가하기"/>
+                                        <connections>
+                                            <action selector="tappedAddTodoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFx-sO-PPK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -35,6 +38,38 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-QY-vOG">
                                 <rect key="frame" x="0.0" y="119" width="393" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="88" id="XWJ-8S-fZ1" customClass="TableViewCell" customModule="TodoList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XWJ-8S-fZ1" id="Ak8-tB-W5r">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAz-Gv-sz1">
+                                                    <rect key="frame" x="40" y="29" width="259" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBq-Ld-N4U">
+                                                    <rect key="frame" x="309" y="28.666666666666671" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pAz-Gv-sz1" firstAttribute="centerY" secondItem="Ak8-tB-W5r" secondAttribute="centerY" id="7Nl-Bs-yCx"/>
+                                                <constraint firstItem="pAz-Gv-sz1" firstAttribute="leading" secondItem="Ak8-tB-W5r" secondAttribute="leadingMargin" constant="20" id="Y5H-4p-It5"/>
+                                                <constraint firstItem="TBq-Ld-N4U" firstAttribute="leading" secondItem="pAz-Gv-sz1" secondAttribute="trailing" constant="10" id="bQK-E7-A6h"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TBq-Ld-N4U" secondAttribute="trailing" constant="15" id="cUi-FK-Dbp"/>
+                                                <constraint firstItem="TBq-Ld-N4U" firstAttribute="centerY" secondItem="Ak8-tB-W5r" secondAttribute="centerY" id="kVZ-Wc-Anb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="switchLabel" destination="TBq-Ld-N4U" id="fBE-ec-fFA"/>
+                                            <outlet property="titleLabel" destination="pAz-Gv-sz1" id="YiF-cB-vzh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTodoBtn" destination="Bcz-6V-L5E" id="hci-Eg-B3V"/>
                         <outlet property="todoTableView" destination="VaL-QY-vOG" id="ZHI-7C-2HN"/>
                     </connections>
                 </viewController>
