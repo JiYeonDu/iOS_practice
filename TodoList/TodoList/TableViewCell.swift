@@ -16,8 +16,11 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var switchLabel: UISwitch!
+    @IBOutlet weak var memoLabel: UILabel!
     
-
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

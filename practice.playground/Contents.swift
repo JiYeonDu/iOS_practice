@@ -463,7 +463,6 @@ substring = "swift"
 print(str)
 print(substring)
 print(type(of: substring)) // 출력: Substring
- */
 
 func solution(_ n:Int) -> String {
     var result = ""
@@ -479,3 +478,63 @@ func solution(_ n:Int) -> String {
 }
 
 solution(3)
+
+
+
+import Foundation
+
+func solution(_ a:[Int], _ b:[Int]) -> Int {
+    var index = 0
+    var result = a.compactMap { num1 in
+        var res = num1 * b[index]
+        index += 1
+        return res
+    }
+    return result.reduce(0, +)
+}
+
+solution([1,2,3,4], [-3,-1,0,2])
+
+
+let numbers = [1,2,3,4]
+let numbers2 = [-3,-1,0,2]
+
+let zipped = zip(numbers, numbers2)
+for (zip) in  zipped {
+    print(zip)
+}
+print(zipped)
+
+import Foundation
+
+func solution(_ left:Int, _ right:Int) -> Int {
+    var result = 0
+    for i in left...right{
+        if getCount(i) % 2 == 0 {
+            result += i
+        } else {
+            result -= i
+        }
+    }
+    return result
+}
+
+func getCount(_ num:Int) -> Int {
+    var result = 0
+    for i in 1...num{
+        if num % i == 0{
+            result += 1
+        }
+    }
+    return result
+}
+
+solution(13, 17)
+*/
+
+func solution(_ s:String) -> String {
+    var result = s.sorted(by: >)
+    return result
+}
+
+solution("Zbcdefg")
