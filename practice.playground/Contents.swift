@@ -530,7 +530,7 @@ func getCount(_ num:Int) -> Int {
 }
 
 solution(13, 17)
-*/
+
 
 func solution(_ s:String) -> String {
     var result = s.sorted(by: >)
@@ -538,3 +538,33 @@ func solution(_ s:String) -> String {
 }
 
 solution("Zbcdefg")
+ 
+
+func solution(_ price:Int, _ money:Int, _ count:Int) -> Int64{
+    var answer:Int64 = -1
+    var totalprice = 0
+    for time in 1...count {
+        totalprice += price * time
+    }
+    if money > totalprice {
+        answer = 0
+    } else {
+        answer = Int64(totalprice - money)
+    }
+    return answer
+}
+
+solution(3, 20, 4)
+ */
+
+
+func solution(_ s:String) -> Bool {
+    if s.count == 4 || s.count == 6 {
+        if let result = Int(s) {
+            return true
+        }
+    }
+    return false
+}
+solution("a234")
+solution("1234")
