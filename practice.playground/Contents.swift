@@ -555,7 +555,7 @@ func solution(_ price:Int, _ money:Int, _ count:Int) -> Int64{
 }
 
 solution(3, 20, 4)
- */
+
 
 
 func solution(_ s:String) -> Bool {
@@ -568,3 +568,28 @@ func solution(_ s:String) -> Bool {
 }
 solution("a234")
 solution("1234")
+*/
+
+
+func solution(_ arr1:[[Int]], _ arr2:[[Int]]) -> [[Int]] {
+    var result: [[Int]] = []
+    for i in 0...arr1.count-1 {
+        var res: [Int] = []
+        for j in 0...arr1[0].count-1 {
+        res.append(arr1[i][j] + arr2[i][j])
+        }
+        result.append(res)
+    }
+    return result
+}
+solution([[1,2],[2,3]] , [[3,4],[5,6]])
+
+
+//var array = [[1,2,3],[2,3]]
+
+
+var array1 = [[1,2],[2,3]]
+var array2 = [[3,4],[5,6]]
+var result = array1.compactMap { li in
+
+}

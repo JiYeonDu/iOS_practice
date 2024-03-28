@@ -27,12 +27,20 @@
                                             <action selector="tappedAddTodoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFx-sO-PPK"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TodoList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-K5-M8D">
+                                        <rect key="frame" x="20.000000000000007" y="14" width="104.66666666666669" height="32.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstItem="Bcz-6V-L5E" firstAttribute="centerY" secondItem="CqK-pM-Itp" secondAttribute="centerY" id="C4A-mJ-Sze"/>
+                                    <constraint firstItem="YRj-K5-M8D" firstAttribute="centerY" secondItem="CqK-pM-Itp" secondAttribute="centerY" id="Ie0-e5-Gsn"/>
                                     <constraint firstAttribute="trailing" secondItem="Bcz-6V-L5E" secondAttribute="trailing" constant="10" id="Nmv-ax-7EJ"/>
                                     <constraint firstAttribute="height" constant="60" id="egi-PK-c0i"/>
+                                    <constraint firstItem="YRj-K5-M8D" firstAttribute="leading" secondItem="CqK-pM-Itp" secondAttribute="leading" constant="20" id="gBp-CN-xat"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-QY-vOG">
@@ -58,7 +66,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdfasdfasdaaaaaaaaaannsdfnfnnnnnnnnnnnn" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgc-3m-l5d">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdfasdfasdaaaaaaaaaannsdfnfnnnnnnnnnnnn" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgc-3m-l5d">
                                                     <rect key="frame" x="40" y="58.666666666666664" width="323" height="122.33333333333334"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

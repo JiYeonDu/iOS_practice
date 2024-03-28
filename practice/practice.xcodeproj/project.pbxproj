@@ -13,6 +13,7 @@
 		F4610FE22BAAACA20081D29C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4610FE12BAAACA20081D29C /* Assets.xcassets */; };
 		F4610FE52BAAACA20081D29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4610FE32BAAACA20081D29C /* LaunchScreen.storyboard */; };
 		F4C1CB232BB326F7004A1834 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CB222BB326F7004A1834 /* TodoListViewController.swift */; };
+		F4C1CB252BB3EBC7004A1834 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CB242BB3EBC7004A1834 /* TodoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F4610FE42BAAACA20081D29C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4610FE62BAAACA20081D29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4C1CB222BB326F7004A1834 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		F4C1CB242BB3EBC7004A1834 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F4610FE12BAAACA20081D29C /* Assets.xcassets */,
 				F4610FE32BAAACA20081D29C /* LaunchScreen.storyboard */,
 				F4610FE62BAAACA20081D29C /* Info.plist */,
+				F4C1CB242BB3EBC7004A1834 /* TodoTableViewCell.swift */,
 			);
 			path = practice;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				F4C1CB232BB326F7004A1834 /* TodoListViewController.swift in Sources */,
 				F4610FD92BAAACA00081D29C /* AppDelegate.swift in Sources */,
 				F4610FDB2BAAACA00081D29C /* SceneDelegate.swift in Sources */,
+				F4C1CB252BB3EBC7004A1834 /* TodoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
