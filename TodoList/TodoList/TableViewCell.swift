@@ -7,20 +7,12 @@
 
 import UIKit
 
-protocol TableViewCellDelegate {
-    func tappedSwitchBtn(for index: Int, like: Bool)
-}
-
 
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var switchLabel: UISwitch!
     @IBOutlet weak var memoLabel: UILabel!
-    
-    
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

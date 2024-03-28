@@ -13,7 +13,6 @@ struct Todo {
     var isCompleted: Bool
     var memo: String
     var isExpended: Bool
-    
 }
 
 class ViewController: UIViewController{
@@ -24,7 +23,6 @@ class ViewController: UIViewController{
                             Todo(id: 1, title: "title2", isCompleted: true, memo: "hello", isExpended: false),
                             Todo(id: 2, title: "title3", isCompleted: true, memo: "The sun dipped below the horizon, painting the sky in hues of orange and pink. A gentle breeze rustled through the trees, carrying the scent of blooming flowers. Birds chirped their evening song as they returned to their nests. In the distance, the silhouette of mountains stood against the fading light. As twilight descended, the world seemed to hold its breath in anticipation of the night.", isExpended: false)]
     
-
     @IBOutlet weak var todoTableView: UITableView!
     @IBOutlet weak var addTodoBtn: UIButton!
     
@@ -81,8 +79,6 @@ class ViewController: UIViewController{
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }
@@ -94,11 +90,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let todo = todoList[indexPath.row]
         if todo.isCompleted {
             cell.titleLabel.attributedText = todo.title.strikeThrough()
-            cell.switchLabel?.setOn(true, animated: true)
         } else {
             cell.titleLabel.attributedText = NSAttributedString(string: todo.title)
-            cell.switchLabel?.setOn(false, animated: true)
         }
+        cell.switchLabel.isOn = todo.isCompleted
         cell.switchLabel.tag = indexPath.row
         cell.switchLabel.addTarget(self, action: #selector(switchDidChange(_:)), for: .valueChanged)
         cell.memoLabel.text = todo.memo
@@ -123,7 +118,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -143,11 +137,6 @@ extension String {
     func strikeThrough() -> NSAttributedString {
         let attributeString = NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0, attributeString.length))
-        return attributeString
-    }
-    func removeStrikethroughText() -> NSAttributedString {
-        let attributeString = NSMutableAttributedString(string: self)
-        attributeString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSMakeRange(0, attributeString.length))
         return attributeString
     }
 }
