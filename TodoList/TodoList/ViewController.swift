@@ -86,6 +86,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = todoTableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TableViewCell
         
+        //print(indexPath.row)
         //데이터 셀에 뿌리기
         let todo = todoList[indexPath.row]
         if todo.isCompleted {
@@ -97,7 +98,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.switchLabel.tag = indexPath.row
         cell.switchLabel.addTarget(self, action: #selector(switchDidChange(_:)), for: .valueChanged)
         cell.memoLabel.text = todo.memo
- 
+        print(indexPath.row)
         return cell
     }
     
