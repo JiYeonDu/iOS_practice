@@ -611,7 +611,7 @@ for _ in 1...3 {
     print("")
 }
 
-*/
+
 
 
 func solution(_ n:Int, _ m:Int) -> [Int] {
@@ -642,4 +642,24 @@ func solution(_ n:Int, _ m:Int) -> [Int] {
 }
 
 solution(3, 12)
+*/
 
+import Foundation
+
+func solution(_ n:Int) -> Int {
+    //3진법으로
+    var num = n
+    var result: [Int] = []
+    while num >= 3 {
+        result.append(num % 3)
+        num = num / 3
+    }
+    result.append(num)
+    num = 0
+    for i in 0...result.count-1 {
+        num += Int(pow(3.0,Float(i))) * result[result.count-1-i]
+    }
+    return 0
+}
+
+solution(45)
