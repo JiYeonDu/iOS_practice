@@ -570,7 +570,7 @@ solution("a234")
 solution("1234")
 */
 
-
+/*
 func solution(_ arr1:[[Int]], _ arr2:[[Int]]) -> [[Int]] {
     var result: [[Int]] = []
     for i in 0...arr1.count-1 {
@@ -593,3 +593,53 @@ var array2 = [[3,4],[5,6]]
 var result = array1.compactMap { li in
 
 }
+
+*/
+
+
+
+/*
+let n = readLine()!.components(separatedBy: [" "]).map { Int($0)! }
+let (a, b) = (n[0], n[1])
+print(a,b)
+
+
+for _ in 1...3 {
+    for _ in 1...5 {
+        print("*", terminator: "")
+    }
+    print("")
+}
+
+*/
+
+
+func solution(_ n:Int, _ m:Int) -> [Int] {
+    //최대공약수
+    var max = n > m ? n : m
+    var result: [Int] = []
+    for num in 1...max{
+        if max % n == 0 && max % m == 0{
+            result.append(max)
+        }
+        max += 1
+    }
+    while true {
+        if n % min == 0 && m % min == 0{
+            break
+        }
+        min -= 1
+    }
+    var max = n > m ? n : m
+    while true {
+        if max % n == 0 && max % m == 0{
+            break
+        }
+        max += 1
+    }
+    
+    return [min, max]
+}
+
+solution(3, 12)
+
