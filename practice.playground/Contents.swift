@@ -642,7 +642,7 @@ func solution(_ n:Int, _ m:Int) -> [Int] {
 }
 
 solution(3, 12)
-*/
+
 
 import Foundation
 
@@ -663,3 +663,22 @@ func solution(_ n:Int) -> Int {
 }
 
 solution(45)
+ */
+func solution(_ s:String) -> String {
+    var result: [String] = []
+    var words = s.split(separator: " ")
+    for word in words {
+        for index in 0...word.count-1{
+            let currentIndex = word.index(word.startIndex, offsetBy: index)
+            if index % 2 == 0 {
+                result.append(String(word[currentIndex]).uppercased())
+            } else {
+                result.append(String(word[currentIndex]))
+            }
+        }
+        result.append(" ")
+    }
+    return result.joined()
+}
+
+print(solution("try hello world"))
