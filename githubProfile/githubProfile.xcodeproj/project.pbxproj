@@ -17,7 +17,6 @@
 		F4729D082BBEB97800BFDFD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4729D062BBEB97800BFDFD6 /* LaunchScreen.storyboard */; };
 		F4E06F072BBFEFBA00EA8744 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4E06F062BBFEFBA00EA8744 /* Alamofire */; };
 		F4E06F092BBFEFBA00EA8744 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F4E06F082BBFEFBA00EA8744 /* AlamofireDynamic */; };
-		F4E06F0F2BC0574F00EA8744 /* ViewModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E06F0E2BC0574F00EA8744 /* ViewModelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		F4729D042BBEB97800BFDFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4729D072BBEB97800BFDFD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4729D092BBEB97800BFDFD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4E06F0E2BC0574F00EA8744 /* ViewModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +71,6 @@
 				F4729D042BBEB97800BFDFD6 /* Assets.xcassets */,
 				F4729D062BBEB97800BFDFD6 /* LaunchScreen.storyboard */,
 				F4729D092BBEB97800BFDFD6 /* Info.plist */,
-				F4E06F0E2BC0574F00EA8744 /* ViewModelManager.swift */,
 				F458323D2BC5511700C9CA0D /* TableViewCell.swift */,
 			);
 			path = githubProfile;
@@ -160,7 +157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F458323E2BC5511700C9CA0D /* TableViewCell.swift in Sources */,
-				F4E06F0F2BC0574F00EA8744 /* ViewModelManager.swift in Sources */,
 				F4729D002BBEB97700BFDFD6 /* ViewController.swift in Sources */,
 				F4729CFC2BBEB97600BFDFD6 /* AppDelegate.swift in Sources */,
 				F4729CFE2BBEB97700BFDFD6 /* SceneDelegate.swift in Sources */,
