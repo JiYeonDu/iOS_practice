@@ -120,6 +120,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func callProfileAPI(completion: @escaping (Profile?) -> Void) {
         let url = "https://api.github.com/users/jiyeondu"
         let param = ["auth" : ""]
@@ -152,6 +153,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

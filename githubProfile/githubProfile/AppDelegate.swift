@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  githubProfile
 //
-//  Created by 신지연 on 2024/04/04.
+//  Created by 신지연 on 2024/04/09.
 //
 
 import UIKit
