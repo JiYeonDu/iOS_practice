@@ -599,86 +599,213 @@ var result = array1.compactMap { li in
 
 
 /*
-let n = readLine()!.components(separatedBy: [" "]).map { Int($0)! }
-let (a, b) = (n[0], n[1])
-print(a,b)
-
-
-for _ in 1...3 {
-    for _ in 1...5 {
-        print("*", terminator: "")
-    }
-    print("")
-}
-
-
-
-
-func solution(_ n:Int, _ m:Int) -> [Int] {
-    //최대공약수
-    var max = n > m ? n : m
-    var result: [Int] = []
-    for num in 1...max{
-        if max % n == 0 && max % m == 0{
-            result.append(max)
-        }
-        max += 1
-    }
-    while true {
-        if n % min == 0 && m % min == 0{
-            break
-        }
-        min -= 1
-    }
-    var max = n > m ? n : m
-    while true {
-        if max % n == 0 && max % m == 0{
-            break
-        }
-        max += 1
-    }
-    
-    return [min, max]
-}
-
-solution(3, 12)
-
+ let n = readLine()!.components(separatedBy: [" "]).map { Int($0)! }
+ let (a, b) = (n[0], n[1])
+ print(a,b)
+ 
+ 
+ for _ in 1...3 {
+ for _ in 1...5 {
+ print("*", terminator: "")
+ }
+ print("")
+ }
+ 
+ 
+ 
+ 
+ func solution(_ n:Int, _ m:Int) -> [Int] {
+ //최대공약수
+ var max = n > m ? n : m
+ var result: [Int] = []
+ for num in 1...max{
+ if max % n == 0 && max % m == 0{
+ result.append(max)
+ }
+ max += 1
+ }
+ while true {
+ if n % min == 0 && m % min == 0{
+ break
+ }
+ min -= 1
+ }
+ var max = n > m ? n : m
+ while true {
+ if max % n == 0 && max % m == 0{
+ break
+ }
+ max += 1
+ }
+ 
+ return [min, max]
+ }
+ 
+ solution(3, 12)
+ 
+ 
+ import Foundation
+ 
+ func solution(_ n:Int) -> Int {
+ //3진법으로
+ var num = n
+ var result: [Int] = []
+ while num >= 3 {
+ result.append(num % 3)
+ num = num / 3
+ }
+ result.append(num)
+ num = 0
+ for i in 0...result.count-1 {
+ num += Int(pow(3.0,Float(i))) * result[result.count-1-i]
+ }
+ return 0
+ }
+ 
+ solution(45)
+ 
+ import Foundation
+ 
+ func solution(_ n:Int) -> Int {
+ var num = n
+ var result: [Int] = []
+ while num >= 3 {
+ result.append(num % 3)
+ num = num / 3
+ }
+ result.append(num)
+ num = 0
+ for i in 0...result.count-1 {
+ num += Int(pow(3.0,Float(i))) * result[result.count-1-i]
+ }
+ return num
+ }
+ 
+ solution(100000000)
+ 
+ 
+ 
+ func solution(_ s:String) -> String {
+ var arr: [String] = []
+ var x = 0
+ for i in s {
+ if x % 2 == 0 {
+ arr.append(String(i.uppercased()))
+ } else {
+ arr.append(String(i.lowercased()))
+ }
+ x += 1
+ if i == " " {
+ x = 0
+ }
+ }
+ return arr.joined()
+ }
+ 
+ solution("a b c     ")
+ 
 
 import Foundation
 
-func solution(_ n:Int) -> Int {
-    //3진법으로
-    var num = n
-    var result: [Int] = []
-    while num >= 3 {
-        result.append(num % 3)
-        num = num / 3
-    }
-    result.append(num)
-    num = 0
-    for i in 0...result.count-1 {
-        num += Int(pow(3.0,Float(i))) * result[result.count-1-i]
+func solution(_ number:[Int]) -> Int {
+    for num in number {
+        
     }
     return 0
 }
 
-solution(45)
- */
-func solution(_ s:String) -> String {
-    var result: [String] = []
-    var words = s.split(separator: " ")
-    for word in words {
-        for index in 0...word.count-1{
-            let currentIndex = word.index(word.startIndex, offsetBy: index)
-            if index % 2 == 0 {
-                result.append(String(word[currentIndex]).uppercased())
-            } else {
-                result.append(String(word[currentIndex]))
+import Foundation
+
+func solution(_ number:[Int]) -> Int {
+    var result = 0
+    for i in 0...number.count-3 {
+        for j in i+1...number.count-2 {
+            for k in j+1...number.count-1 {
+                if number[i] + number[j] + number[k] == 0 {
+                    print(number[i])
+                    print(number[j])
+                    print(number[k])
+                    print("res \(number[i] + number[j] + number[k])")
+                    result += 1
+                }
             }
         }
-        result.append(" ")
     }
-    return result.joined()
+    return result
 }
 
-print(solution("try hello world"))
+print(solution([-2, 3, 0, 2, -5]))
+
+
+
+
+import Foundation
+
+func solution(_ t:String, _ p:String) -> Int {
+    var leng = p.count
+    var str = t
+    var result = 0
+    for i in 0...t.count-leng{
+        //print(Int(str.suffix(leng))!)
+        if Int(str.suffix(leng))! <= Int(p)! {
+            result += 1
+        }
+        str.popLast()
+    }
+    
+    return result
+}
+
+solution("10203", "15")
+
+
+import Foundation
+
+func solution(_ sizes:[[Int]]) -> Int {
+    var input: [[Int]] = sizes
+    var width: [Int] = []
+    var length: [Int] = []
+    for var size in input {
+        if size[0] < size[1] {
+            let temp = size[0]
+            size[0] = size[1]
+            size[1] = temp
+        }
+        width.append(size[0])
+        length.append(size[1])
+    }
+    return width.max()! * length.max()!
+}
+
+solution([[60, 50], [30, 70], [60, 30], [80, 40]])
+ */
+
+func solution(_ s:String, _ n:Int) -> String {
+    var charToAscii: [UInt8] = []
+    var asciiToChar = ""
+    for char in s {
+        if 65 <= char.asciiValue! && char.asciiValue! <= 90 {
+            if char.asciiValue! + UInt8(n) > 90 {
+                charToAscii.append(char.asciiValue! + UInt8(n) - 26)
+            } else {
+                charToAscii.append(char.asciiValue! + UInt8(n))
+            }
+        } else if char == " " {
+            charToAscii.append(char.asciiValue!)
+        } else{
+            if char.asciiValue! + UInt8(n) > 122 {
+                charToAscii.append(char.asciiValue! + UInt8(n) - 26)
+            } else {
+                charToAscii.append(char.asciiValue! + UInt8(n))
+            }
+        }
+    }
+    //print(charToAscii)
+    for asc in charToAscii {
+        asciiToChar.append(String(UnicodeScalar(asc)))
+    }
+    //print(asciiToChar)
+    return asciiToChar
+}
+
+solution("a B z", 4)
