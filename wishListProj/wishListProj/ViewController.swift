@@ -66,6 +66,7 @@ class ViewController: UIViewController {
                 context.rollback()
             }
             
+            //확인용! 나중에 꼭 지우기
             do {
                 let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
                 let products = try context.fetch(fetchRequest)

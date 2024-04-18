@@ -12,6 +12,8 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     
     var dataList: [NSManagedObject] = []
     
+    let refreshControll : UIRefreshControl = UIRefreshControl()
+    
     @IBOutlet weak var wishListTableView: UITableView!
     
     
@@ -20,8 +22,14 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         wishListTableView.dataSource = self
         wishListTableView.delegate = self
         dataList = fetchData()
-        print(dataList)
+        wishListTableView.refreshControl = refreshControll
+        refreshControll.addTarget(self, action: #selector(self.refreshFunction), for: .valueChanged)
         
+    }
+    
+    @objc func refreshFunction() {
+        wishListTableView.reloadData()
+        refreshControll.endRefreshing()
     }
     
     func fetchData() -> [NSManagedObject] {
