@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     var productID = 1
     
-    var productNow: RemoteProduct?
+    var productNow: RemoteProduct!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleView: UILabel!
@@ -65,6 +65,16 @@ class ViewController: UIViewController {
             } catch {
                 context.rollback()
             }
+            
+            do {
+                let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+                let products = try context.fetch(fetchRequest)
+                    products.forEach {
+                        print($0.title, $0.price, $0.id)
+                    }
+               } catch {
+                       print("Error fetching data: \(error)")
+                }
         }
     }
     

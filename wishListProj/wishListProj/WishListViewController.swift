@@ -44,14 +44,13 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = self.dataList[indexPath.row]
         let title = record.value(forKey: "title") as? String
-        let total = record.value(forKey: "id") as? String
-        let price = record.value(forKey: "price") as? String
+        let total = record.value(forKey: "id") as? Int
+        let price = record.value(forKey: "price") as? Int
         
         let cell = wishListTableView.dequeueReusableCell(withIdentifier: "wishListTableViewCell", for: indexPath) as! wishListTableViewCell
-        print(title, price, total)
         cell.cellTitleLabel.text = title
-        cell.cellPriceLabel.text = price
-        cell.cellTotalLabel.text = total
+        cell.cellPriceLabel.text = "$\(price!)"
+        cell.cellTotalLabel.text = "[\(total!)]"
         
         return cell
     }
@@ -63,8 +62,6 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             wishListTableView.beginUpdates()
-            self.dataList.remove(at: indexPath.row)
-            wishListTableView.deleteRows(at: [indexPath], with: .fade)
             
             let object = self.dataList[indexPath.row]
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -75,6 +72,10 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
                } catch {
                    context.rollback()
             }
+            
+            self.dataList.remove(at: indexPath.row)
+            wishListTableView.deleteRows(at: [indexPath], with: .fade)
+            
             wishListTableView.endUpdates()
         }
     }
@@ -85,7 +86,6 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
 class wishListTableViewCell: UITableViewCell{
     
     @IBOutlet weak var cellTitleLabel: UILabel!
-    
     @IBOutlet weak var cellPriceLabel: UILabel!
     @IBOutlet weak var cellTotalLabel: UILabel!
 }
