@@ -10,7 +10,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-
+    // MARK: - View
     //Top
     private lazy var topView: UIView = {
         let view = UIView()
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }()
     
     
-    // MARK : - Lifecycle
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setTopUI()
