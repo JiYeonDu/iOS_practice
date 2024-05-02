@@ -65,17 +65,6 @@ class ViewController: UIViewController {
             } catch {
                 context.rollback()
             }
-            
-            //확인용! 나중에 꼭 지우기
-            do {
-                let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-                let products = try context.fetch(fetchRequest)
-                    products.forEach {
-                        print($0.title, $0.price, $0.id)
-                    }
-               } catch {
-                       print("Error fetching data: \(error)")
-                }
         }
     }
     
@@ -120,6 +109,7 @@ class ViewController: UIViewController {
                     } catch {
                         print("decode error: \(error)")
                     }
+                    
                 }
             }
             task.resume()
