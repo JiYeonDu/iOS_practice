@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  Booker
+//
+//  Created by 신지연 on 2024/05/02.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = KakaoAK 431223963af2ac76600dcb86d0528184

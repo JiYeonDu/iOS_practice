@@ -48,7 +48,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let record = self.dataList[indexPath.row]
         let title = record.value(forKey: "title") as? String
@@ -87,6 +87,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
             wishListTableView.endUpdates()
         }
     }
+    
   
 
 }
