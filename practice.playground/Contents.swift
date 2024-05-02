@@ -809,7 +809,7 @@ func solution(_ s:String, _ n:Int) -> String {
 }
 
 solution("a B z", 4)
- */
+ 
 
 import Foundation
 
@@ -829,10 +829,65 @@ func solution(_ s:String) -> Int {
                 result.append(dic[flag]!)
                 flag = ""
             }
-        }
+        }32
     }
     let res = result.map { String($0) }.joined()
     return Int(res)!
 }
 
 print(solution("2three45sixseven"))
+
+
+func solution(_ strings:[String], _ n:Int) -> [String] {
+    let sortedString = strings.sorted { first, second  in
+        let firstWord = first.index(first.startIndex, offsetBy: n)
+        let secondWord = second.index(second.startIndex, offsetBy: n)
+        print("\(firstWord)--\(secondWord)")
+        if first[firstWord] == second[secondWord] {
+            return first < second
+        } else {
+            return first[firstWord] < second[secondWord]
+        }
+    }
+    
+    return sortedString
+}
+
+print(solution(["sun", "bed", "car"], 1))
+
+
+import Foundation
+
+func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
+    var result: [Int] = []
+    for command in commands {
+        let i = command[0] - 1
+        let j = command[1]
+        let k = command[2] - 1
+        var newCommand = Array(array[i..<j])
+        newCommand = newCommand.sorted(by: <)
+        result.append(newCommand[k])
+    }
+    return result
+}
+print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+
+ */
+import Foundation
+
+func solution(_ numbers:[Int]) -> [Int] {
+    var res: [Int] = []
+    for idx in 0..<numbers.count-1{
+        for idx2 in idx+1..<numbers.count{
+            print("idx \(numbers[idx]) idx2 \(numbers[idx2])")
+            if !res.contains(numbers[idx] + numbers[idx2]){
+                print(numbers[idx]+numbers[idx2])
+                res.append(numbers[idx] + numbers[idx2])
+            }
+        }
+    }
+    res.sort(by: <)
+    return res
+}
+
+print(solution([2,1,3,4,1]))
