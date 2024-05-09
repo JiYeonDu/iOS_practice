@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
                 section.interGroupSpacing = spacing
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 10, trailing: 10)
                 
                 // header
                 let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(60.0))
@@ -311,6 +311,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 header.delBtn.addTarget(self, action: #selector(delBtnDidTapped), for: .touchUpInside)
             default:
                 header.prepare(text: "검색결과")
+                header.delBtn.removeFromSuperview()
             }
             return header
         default:
