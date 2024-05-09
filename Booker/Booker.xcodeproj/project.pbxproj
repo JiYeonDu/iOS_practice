@@ -16,12 +16,23 @@
 		F40A14352BE32396009B6E7E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A14342BE32396009B6E7E /* Response.swift */; };
 		F40A14382BE32423009B6E7E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F40A14372BE32423009B6E7E /* SnapKit */; };
 		F40A143A2BE32423009B6E7E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F40A14392BE32423009B6E7E /* SnapKit-Dynamic */; };
+		F4121F1A2BEB8B5500EFA5FB /* LastSearchBook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4121F182BEB8B5500EFA5FB /* LastSearchBook+CoreDataClass.swift */; };
+		F4121F1B2BEB8B5500EFA5FB /* LastSearchBook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4121F192BEB8B5500EFA5FB /* LastSearchBook+CoreDataProperties.swift */; };
 		F4D13DA62BE37EE700FBE452 /* BookerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4D13DA42BE37EE700FBE452 /* BookerModel.xcdatamodeld */; };
 		F4D13DA82BE37FAD00FBE452 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13DA72BE37FAD00FBE452 /* NetworkManager.swift */; };
 		F4D13DAA2BE37FCE00FBE452 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13DA92BE37FCE00FBE452 /* ViewModel.swift */; };
 		F4D13DAD2BE381E600FBE452 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4D13DAC2BE381E600FBE452 /* Alamofire */; };
 		F4D13DAF2BE381E600FBE452 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F4D13DAE2BE381E600FBE452 /* AlamofireDynamic */; };
 		F4D13DB12BE3876400FBE452 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13DB02BE3876400FBE452 /* CoreDataManager.swift */; };
+		F4D13E052BE9AC5900FBE452 /* RecentBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E042BE9AC5900FBE452 /* RecentBookCell.swift */; };
+		F4D13E072BE9AC8000FBE452 /* SearchBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E062BE9AC8000FBE452 /* SearchBookCell.swift */; };
+		F4D13E092BE9BDDE00FBE452 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E082BE9BDDE00FBE452 /* HeaderView.swift */; };
+		F4D13E0B2BEA246C00FBE452 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E0A2BEA246C00FBE452 /* CartViewController.swift */; };
+		F4D13E0D2BEA319400FBE452 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E0C2BEA319400FBE452 /* CartViewCell.swift */; };
+		F4D13E112BEA32E700FBE452 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F4D13E102BEA32E700FBE452 /* Kingfisher */; };
+		F4D13E142BEA396100FBE452 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E132BEA396100FBE452 /* DetailViewController.swift */; };
+		F4D13E1B2BEA8BC700FBE452 /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E192BEA8BC700FBE452 /* Cart+CoreDataClass.swift */; };
+		F4D13E1C2BEA8BC700FBE452 /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D13E1A2BEA8BC700FBE452 /* Cart+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +45,21 @@
 		F40A14252BE32286009B6E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F40A14272BE32286009B6E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F40A14342BE32396009B6E7E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		F4121F182BEB8B5500EFA5FB /* LastSearchBook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastSearchBook+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4121F192BEB8B5500EFA5FB /* LastSearchBook+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LastSearchBook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4D13DA32BE34E2D00FBE452 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		F4D13DA52BE37EE700FBE452 /* BookerModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookerModel.xcdatamodel; sourceTree = "<group>"; };
 		F4D13DA72BE37FAD00FBE452 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F4D13DA92BE37FCE00FBE452 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F4D13DB02BE3876400FBE452 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F4D13E042BE9AC5900FBE452 /* RecentBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookCell.swift; sourceTree = "<group>"; };
+		F4D13E062BE9AC8000FBE452 /* SearchBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCell.swift; sourceTree = "<group>"; };
+		F4D13E082BE9BDDE00FBE452 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		F4D13E0A2BEA246C00FBE452 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		F4D13E0C2BEA319400FBE452 /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
+		F4D13E132BEA396100FBE452 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F4D13E192BEA8BC700FBE452 /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4D13E1A2BEA8BC700FBE452 /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +71,7 @@
 				F4D13DAF2BE381E600FBE452 /* AlamofireDynamic in Frameworks */,
 				F40A14382BE32423009B6E7E /* SnapKit in Frameworks */,
 				F40A143A2BE32423009B6E7E /* SnapKit-Dynamic in Frameworks */,
+				F4D13E112BEA32E700FBE452 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +114,10 @@
 		F40A142D2BE322DD009B6E7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4121F182BEB8B5500EFA5FB /* LastSearchBook+CoreDataClass.swift */,
+				F4121F192BEB8B5500EFA5FB /* LastSearchBook+CoreDataProperties.swift */,
+				F4D13E192BEA8BC700FBE452 /* Cart+CoreDataClass.swift */,
+				F4D13E1A2BEA8BC700FBE452 /* Cart+CoreDataProperties.swift */,
 				F4D13DA42BE37EE700FBE452 /* BookerModel.xcdatamodeld */,
 				F40A14342BE32396009B6E7E /* Response.swift */,
 				F4D13DA72BE37FAD00FBE452 /* NetworkManager.swift */,
@@ -111,9 +137,39 @@
 		F40A142F2BE3231E009B6E7E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F40A141D2BE32285009B6E7E /* ViewController.swift */,
+				F4D13E122BEA394B00FBE452 /* DetailView */,
+				F4D13E0E2BEA319800FBE452 /* CartView */,
+				F4D13DB42BE3933300FBE452 /* SearchView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4D13DB42BE3933300FBE452 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				F40A141D2BE32285009B6E7E /* ViewController.swift */,
+				F4D13E042BE9AC5900FBE452 /* RecentBookCell.swift */,
+				F4D13E062BE9AC8000FBE452 /* SearchBookCell.swift */,
+				F4D13E082BE9BDDE00FBE452 /* HeaderView.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		F4D13E0E2BEA319800FBE452 /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				F4D13E0A2BEA246C00FBE452 /* CartViewController.swift */,
+				F4D13E0C2BEA319400FBE452 /* CartViewCell.swift */,
+			);
+			path = CartView;
+			sourceTree = "<group>";
+		};
+		F4D13E122BEA394B00FBE452 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				F4D13E132BEA396100FBE452 /* DetailViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +193,7 @@
 				F40A14392BE32423009B6E7E /* SnapKit-Dynamic */,
 				F4D13DAC2BE381E600FBE452 /* Alamofire */,
 				F4D13DAE2BE381E600FBE452 /* AlamofireDynamic */,
+				F4D13E102BEA32E700FBE452 /* Kingfisher */,
 			);
 			productName = Booker;
 			productReference = F40A14162BE32285009B6E7E /* Booker.app */;
@@ -169,6 +226,7 @@
 			packageReferences = (
 				F40A14362BE32423009B6E7E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F4D13DAB2BE381E600FBE452 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F4D13E0F2BEA32E700FBE452 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = F40A14172BE32285009B6E7E /* Products */;
 			projectDirPath = "";
@@ -197,14 +255,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D13E072BE9AC8000FBE452 /* SearchBookCell.swift in Sources */,
+				F4D13E0D2BEA319400FBE452 /* CartViewCell.swift in Sources */,
 				F4D13DA62BE37EE700FBE452 /* BookerModel.xcdatamodeld in Sources */,
+				F4D13E052BE9AC5900FBE452 /* RecentBookCell.swift in Sources */,
+				F4121F1B2BEB8B5500EFA5FB /* LastSearchBook+CoreDataProperties.swift in Sources */,
 				F40A141E2BE32285009B6E7E /* ViewController.swift in Sources */,
+				F4D13E1B2BEA8BC700FBE452 /* Cart+CoreDataClass.swift in Sources */,
+				F4D13E0B2BEA246C00FBE452 /* CartViewController.swift in Sources */,
 				F40A141A2BE32285009B6E7E /* AppDelegate.swift in Sources */,
 				F4D13DA82BE37FAD00FBE452 /* NetworkManager.swift in Sources */,
+				F4121F1A2BEB8B5500EFA5FB /* LastSearchBook+CoreDataClass.swift in Sources */,
 				F40A14352BE32396009B6E7E /* Response.swift in Sources */,
+				F4D13E092BE9BDDE00FBE452 /* HeaderView.swift in Sources */,
 				F40A141C2BE32285009B6E7E /* SceneDelegate.swift in Sources */,
 				F4D13DB12BE3876400FBE452 /* CoreDataManager.swift in Sources */,
+				F4D13E1C2BEA8BC700FBE452 /* Cart+CoreDataProperties.swift in Sources */,
 				F4D13DAA2BE37FCE00FBE452 /* ViewModel.swift in Sources */,
+				F4D13E142BEA396100FBE452 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +517,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		F4D13E0F2BEA32E700FBE452 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -471,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4D13DAB2BE381E600FBE452 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		F4D13E102BEA32E700FBE452 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4D13E0F2BEA32E700FBE452 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

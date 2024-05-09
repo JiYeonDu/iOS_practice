@@ -1,36 +1,31 @@
 //
 //  SceneDelegate.swift
-//  Booker
+//  kakaoLogin
 //
-//  Created by 신지연 on 2024/05/02.
+//  Created by 신지연 on 2024/05/03.
 //
 
 import UIKit
+import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+            if let url = URLContexts.first?.url {
+                if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                    _ = AuthController.handleOpenUrl(url: url)
+                }
+            }
+        }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        let tabbarController = UITabBarController()
-        tabbarController.setViewControllers([ViewController(), CartViewController()], animated: true)
-        tabbarController.tabBar.backgroundColor = .systemGray6
-        tabbarController.tabBar.tintColor = .systemGreen
-        tabbarController.selectedIndex = 0
-        if let items = tabbarController.tabBar.items {
-            items[0].title = "Search"
-            items[0].image = UIImage(systemName: "magnifyingglass")
-            items[1].title = "Cart"
-            items[1].image = UIImage(systemName: "cart")
-        }
-        window?.rootViewController = tabbarController
-        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
