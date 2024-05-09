@@ -872,7 +872,7 @@ func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
 }
 print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
 
- */
+
 import Foundation
 
 func solution(_ numbers:[Int]) -> [Int] {
@@ -891,3 +891,97 @@ func solution(_ numbers:[Int]) -> [Int] {
 }
 
 print(solution([2,1,3,4,1]))
+
+
+import Foundation
+
+func solution(_ s:String) -> [Int] {
+    var res: [Int] = []
+    var idx = 0
+    for char in s {
+        var count = 1
+        var flag = 0
+        print(s.prefix(idx))
+        for str in s.prefix(idx).reversed(){
+            
+            if str == char{
+                res.append(count)
+                flag = 1
+                break
+            }
+            count += 1
+        }
+        if flag == 0 {
+            res.append(-1)
+        }
+        idx += 1
+    }
+
+    return res
+}
+
+func solution2(_ s: String) -> [Int] {
+    var word: [String: Int] = [:]
+    var result: [Int] = []
+
+    for (index, val) in Array(s).map { String($0) }.enumerated() {
+        print("Index: \(index), Value: \(val)")
+        
+        if let beforeIndex = word[val] {
+            
+            result.append(index - beforeIndex)
+        } else {
+            result.append(-1)
+        }
+
+        word[val] = index
+        print("word \(word)")
+    }
+
+    return result
+}
+
+print(solution2("foobar"))
+
+
+
+import Foundation
+
+func solution(_ food:[Int]) -> String {
+    var result: String = ""
+    var index = 0
+    for dish in food {
+        var count = dish / 2
+        if dish % 2 != 0 {
+            count = (dish - 1) / 2
+        }
+        print(count)
+        for _ in 0..<count {
+            result.append(String(index))
+        }
+        index += 1
+    }
+    return result + "0" + result.reversed()
+}
+
+print(solution([1, 7, 1, 2]))
+ */
+
+import Foundation
+
+func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
+    let value = a / b
+    print(value)
+    var res = 0
+    var rest = 0
+    let val = n
+    let time = 0
+    while val > value {
+        res += val / value
+        rest = val % value
+        
+    }
+    return 0
+}
+
+print(solution(2,1,20))
