@@ -7,28 +7,33 @@
 
 import Foundation
 
-struct Response: Decodable {
+struct Response: Codable {
     let meta: Meta
     let documents: [Document]
 }
 
-struct Meta: Decodable {
-    let total_count: Int
-    let pageable_count: Int
+struct Meta: Codable {
     let is_end: Bool
+    let pageable_count: Int
+    let total_count: Int
+    
+    init(total_count: Int, pageable_count: Int, is_end: Bool) {
+        self.total_count = total_count
+        self.pageable_count = pageable_count
+        self.is_end = is_end
+    }
 }
 
-struct Document: Decodable {
+struct Document: Codable {
     let title: String
     let contents: String
     let url: String
-    let isbn: String
-    let datetime: Date
+    //let isbn: String
     let authors: [String]
     let publisher: String
-    let translators: [String]
+    //let translators: [String]
     let price: Int
-    let sale_price: Int
+    //let sale_price: Int
     let thumbnail: String
-    let status: String
+    //let status: String
 }
